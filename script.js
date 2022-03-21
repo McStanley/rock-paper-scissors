@@ -25,13 +25,22 @@ function playRound(playerSelection, computerSelection) {
     
     switch (result) {
         case 'Win':
+            playerScore++;
             return `You Win! ${playerSelection} beats ${computerSelection}`;
-
         case 'Lose':
+            computerScore++;
             return `You Lose! ${computerSelection} beats ${playerSelection}`;
-
         case 'Draw':
             return `It's a ${playerSelection} draw!`;
-            
+    
     }
 }
+
+function initGame() {
+    playerScore = 0;
+    computerScore = 0;
+}
+
+let playerScore, computerScore;
+
+initGame();
