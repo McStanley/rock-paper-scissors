@@ -1,11 +1,24 @@
+function playerPlay(buttonID) {
+    switch (buttonID) {
+        case 'button-rock':
+            return 'Rock';
+        case 'button-paper':
+            return 'Paper';
+        case 'button-scissors':
+            return 'Scissors';
+    }
+}
+
 function computerPlay() {
     const choice = ['Rock', 'Paper', 'Scissors'];
     // return a random choice
     return choice[Math.floor(Math.random() * 3)];
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(event) {
     let result;
+    const playerSelection = playerPlay(event.target.id);
+    const computerSelection = computerPlay();
 
     if (playerSelection==='Rock') {
         if (computerSelection==='Rock') result = 'Draw';
@@ -32,14 +45,19 @@ function playRound(playerSelection, computerSelection) {
             return `You Lose! ${computerSelection} beats ${playerSelection}`;
         case 'Draw':
             return `It's a ${playerSelection} draw!`;
-    
     }
 }
 
 function initGame() {
     playerScore = 0;
     computerScore = 0;
+
+    buttons.forEach(button => {
+        button.addEventListener('click', playRound);
+    });
 }
+
+const buttons = document.querySelectorAll('.btn');
 
 let playerScore, computerScore;
 

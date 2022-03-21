@@ -29,4 +29,5 @@ body {
 .btn-img {
     height: 100px;
     width: 100px;
+    pointer-events: none;
 }
