@@ -31,3 +31,7 @@ body {
     width: 100px;
     pointer-events: none;
 }
+
+.results {
+    height: 50px;
+}
