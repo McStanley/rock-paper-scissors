@@ -48,19 +48,28 @@ function playRound(event) {
         case 'Draw':
             resultText.textContent = `It's a ${playerSelection} draw!`;
             break;
-            
+
     }
+
+    scorePlayer.textContent = `You: ${playerScore}`;
+    scoreComputer.textContent = `CPU: ${computerScore}`;
 }
 
 function initGame() {
     playerScore = 0;
     computerScore = 0;
 
+    scorePlayer.textContent = `You: ${playerScore}`;
+    scoreComputer.textContent = `CPU: ${computerScore}`;
+    resultText.textContent = '';
+
     buttons.forEach(button => {
         button.addEventListener('click', playRound);
     });
 }
 
+const scorePlayer = document.querySelector('#score-player');
+const scoreComputer = document.querySelector('#score-computer');
 const buttons = document.querySelectorAll('.btn');
 const resultText = document.querySelector('#result-text');
 

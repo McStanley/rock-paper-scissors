@@ -10,6 +10,13 @@ body {
     align-items: center;
 }
 
+.score {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .buttons {
     display: flex;
     gap: 25px;
