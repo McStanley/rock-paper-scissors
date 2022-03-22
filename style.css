@@ -8,9 +8,22 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    user-select: none;
+}
+
+p {
+    margin: 0;
+}
+
+.winner {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .score {
+    height: 50px;
     width: 450px;
     display: flex;
     justify-content: space-between;
@@ -41,4 +54,12 @@ body {
 
 .results {
     height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#winner-text {
+    font-size: 30px;
+    font-weight: bold;
 }

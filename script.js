@@ -53,21 +53,41 @@ function playRound(event) {
 
     scorePlayer.textContent = `You: ${playerScore}`;
     scoreComputer.textContent = `CPU: ${computerScore}`;
+
+    if (playerScore===5 || computerScore===5) {
+        finishGame();
+    }
 }
 
 function initGame() {
     playerScore = 0;
     computerScore = 0;
 
+    winnerText.textContent = '';
     scorePlayer.textContent = `You: ${playerScore}`;
     scoreComputer.textContent = `CPU: ${computerScore}`;
     resultText.textContent = '';
 
     buttons.forEach(button => {
         button.addEventListener('click', playRound);
+        button.style.pointerEvents = 'auto';
     });
 }
 
+function finishGame() {
+    buttons.forEach(button => {
+        button.removeEventListener('click', playRound);
+        button.style.pointerEvents = 'none';
+    });
+
+    if (playerScore===5) {
+        winnerText.textContent = 'You won!';
+    } else {
+        winnerText.textContent = 'You lost!';
+    }
+}
+
+const winnerText = document.querySelector('#winner-text');
 const scorePlayer = document.querySelector('#score-player');
 const scoreComputer = document.querySelector('#score-computer');
 const buttons = document.querySelectorAll('.btn');
