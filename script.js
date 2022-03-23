@@ -60,6 +60,8 @@ function playRound(event) {
 }
 
 function initGame() {
+    btnRestart.style.display = 'none';
+    
     playerScore = 0;
     computerScore = 0;
 
@@ -85,6 +87,8 @@ function finishGame() {
     } else {
         winnerText.textContent = 'You lost!';
     }
+
+    btnRestart.style.display = 'block';
 }
 
 const winnerText = document.querySelector('#winner-text');
@@ -92,7 +96,10 @@ const scorePlayer = document.querySelector('#score-player');
 const scoreComputer = document.querySelector('#score-computer');
 const buttons = document.querySelectorAll('.btn');
 const resultText = document.querySelector('#result-text');
+const btnRestart = document.querySelector('#btn-restart');
 
 let playerScore, computerScore;
+
+btnRestart.addEventListener('click', initGame);
 
 initGame();
