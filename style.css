@@ -33,6 +33,17 @@ p {
     align-items: center;
 }
 
+.footer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #696969;
+    color: #F8F8FF;
+    font-size: 18px;
+}
+
 .winner {
     height: 100px;
     display: flex;
