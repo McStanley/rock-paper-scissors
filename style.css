@@ -8,10 +8,20 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-family: monospace;
     user-select: none;
 }
 
+a {
+    color: #f8f8ff;
+}
+
+a:hover {
+    color: cornflowerblue;
+}
+
 button {
+    background-color: rgb(160 200 250 / 90%);
     border-radius: 15%;
     transition-duration: 0.5s;
 }
@@ -33,7 +43,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 .game {
@@ -51,7 +61,7 @@ p {
     justify-content: center;
     align-items: center;
     background-color: #696969;
-    color: #F8F8FF;
+    color: #f8f8ff;
     font-size: 18px;
 }
 
@@ -64,10 +74,11 @@ p {
 
 .score {
     height: 50px;
-    width: 450px;
+    width: 495px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 22px;
 }
 
 .buttons {
@@ -92,6 +103,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 18px;
 }
 
 .restart {
@@ -107,13 +119,15 @@ p {
 }
 
 #btn-restart {
-    height: 120px;
-    width: 120px;
+    height: 140px;
+    width: 140px;
     font-weight: bold;
+    font-size: 16px;
     display: none;
 }
 
 #btn-restart img {
     height: 80px;
     width: 80px;
+    margin-bottom: 5px;
 }
