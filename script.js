@@ -39,11 +39,11 @@ function playRound(event) {
     switch (result) {
         case 'Win':
             playerScore++;
-            resultText.textContent = `You Win! ${playerSelection} beats ${computerSelection}`;
+            resultText.textContent = `You Win! ${playerSelection} beats ${computerSelection}.`;
             break;
         case 'Lose':
             computerScore++;
-            resultText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`;
+            resultText.textContent = `You Lose! ${computerSelection} beats ${playerSelection}.`;
             break;
         case 'Draw':
             resultText.textContent = `It's a ${playerSelection} draw!`;
@@ -88,7 +88,7 @@ function finishGame() {
         winnerText.textContent = 'You lost!';
     }
 
-    btnRestart.style.display = 'block';
+    btnRestart.style.display = 'flex';
 }
 
 const winnerText = document.querySelector('#winner-text');
